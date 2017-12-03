@@ -96,7 +96,7 @@
 
 <script src="res/js/jquery.js"></script>
 <script src="res/bootstrap/js/bootstrap.js"></script>
-<script src="res/js/ex1.js"></script>
+
 
 
 </body>
