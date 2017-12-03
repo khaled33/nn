@@ -39,7 +39,7 @@ public class inscription extends HttpServlet {
 		user.setPrenom_user(request.getParameter("prnom"));
 		user.setPass_user(request.getParameter("pass"));
 		user.setEmail_user(request.getParameter("email"));
-		
+		UserDao UserDao = new  UserDao();
 		UserDao.ajout(user);
 	}
 
