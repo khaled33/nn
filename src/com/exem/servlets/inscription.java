@@ -14,7 +14,7 @@ import com.exem.beans.User;
 @WebServlet("/inscription")
 public class inscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private UserDao UserDao;   
+    //private UserDao UserDao;   
     
     public inscription() {
         super();
