@@ -41,24 +41,26 @@ public class  UserDao implements Dao<User> {
 		
 		}
 	
-	public String virfConex(String pass ,String email ) {
+	public boolean virfConex(String pass ,String email ) {
 		
 		Connection connect =bdd.getInstance();
-		String req="SELECT * FROM user Where email_user="+email+" && pass_user="+pass+"  ";
+		String req="SELECT * FROM user Where email_user="+email+"   ";
 		
 		Statement stmt=null;
-		String err="";
+		boolean err=true;
 		
 		 try {
 		        stmt = connect.createStatement();
 		        ResultSet rs = stmt.executeQuery(req);
-		         boolean test=rs.next(); 
-		       if(test==true){
-		    	   err="ok";
-		       }
-		       else if(test==false){
-		    	   err="errr";
-		       }
+		       		         
+		         
+		         if (! rs.next()) {
+		        	 err= false;
+		        	}
+		         else {
+		        	 err= true;
+		         }
+		         
 		    } catch (SQLException e ) {
 		        
 		    } 

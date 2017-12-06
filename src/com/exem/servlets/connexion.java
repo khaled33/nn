@@ -43,7 +43,7 @@ public class connexion extends HttpServlet {
 		
 		UserDao UserDao = new UserDao();
 		
-		String m =UserDao.virfConex(pass, email);
+		boolean m =UserDao.virfConex(pass, email);
 		
 		System.out.println(m);
 
