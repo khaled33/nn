@@ -108,9 +108,8 @@ $(document).ready(function () {
 
 
 
-setInterval("aff()",1000);
 
-aff();
+
 function aff() {
     $.post("recep-rapport.php",function (data) {
         $('.box-content').html(data);

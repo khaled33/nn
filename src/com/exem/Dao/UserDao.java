@@ -7,7 +7,7 @@ import com.exem.beans.User;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-public class UserDao implements Dao<User> {
+public class  UserDao implements Dao<User> {
 
 	Connection connect =bdd.getInstance();
 	public    User ajout(User obj) {
@@ -40,6 +40,31 @@ public class UserDao implements Dao<User> {
 		return obj;
 		
 		}
+	
+	public String virfConex(String pass ,String email ) {
+		
+		Connection connect =bdd.getInstance();
+		String req="SELECT * FROM user   ";
+		
+		Statement stmt=null;
+		String err="";
+		
+		 try {
+		        stmt = connect.createStatement();
+		        ResultSet rs = stmt.executeQuery(req);
+		         boolean test=rs.next(); 
+		       if(test==false){
+		    	   err="erreur";
+		       }
+		    } catch (SQLException e ) {
+		        
+		    } 
+		
+		
+		
+		
+		return err;
+	}
 
 	
 

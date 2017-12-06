@@ -46,7 +46,7 @@
             <div class="row">
                 <div class="col-lg-offset-3 col-lg-5 "><h2  id="h2">Créer votre compte Ma PFE</h2></div>
             </div>
-                <form class="well form-horizontal form-group" name="form" id="f" method="post" action="#">
+                <form class="well form-horizontal form-group" name="form" id="f" method="post" action="">
                  <legend>Inscription:</legend>
                     <div class="" id="err-nom" >
                          <label for="nom"  >Non:
@@ -96,8 +96,7 @@
 
 <script src="res/js/jquery.js"></script>
 <script src="res/bootstrap/js/bootstrap.js"></script>
-
-
+<script src="res/js/ex1.js"></script>
 
 </body>
 </html>

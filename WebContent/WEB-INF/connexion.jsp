@@ -1,3 +1,4 @@
+<%@page import="com.exem.beans.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -31,7 +32,7 @@
                 Ma PFE
             </div>
             <div class="col-lg-3 ">
-                <a href="inscription.php" class="btn btn-primary" id="bt">Inscription</a>
+                <a href="inscription" class="btn btn-primary" id="bt">Inscription</a>
             </div>
         </div>
     </div>
@@ -39,6 +40,7 @@
 </div>
 
 <br>
+<p></p>
 
 
 <div class=" col-lg-3" style="    margin-left: 34.333333%;">
@@ -48,12 +50,12 @@
     </div>
 
 
-    <form class="well form-horizontal form-group" name="f" id="f" method="post" action="#">
+    <form class="well form-horizontal form-group" name="f" id="f" method="post" action="">
         <legend>Connexion:</legend>
 
         <div class="" id="err-email" >
             <label for="email"> Email:
-                <input type="email" class="form-control input-sm" id="email"  name="email">
+                <input type="email" class="form-control input-sm" id="email"  name="email" value="${user.email_user }">
             </label>
             <span style="display: none;" class="help-block" id="m"  ></span>
         </div>

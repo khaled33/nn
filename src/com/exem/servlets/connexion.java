@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.exem.Dao.UserDao;
 
-//@WebServlet("/connexion")
+
+@WebServlet("/connexion")
 public class connexion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -36,6 +38,15 @@ public class connexion extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String email= getInitParameter("email");
+		String pass= getInitParameter("pass");
+		
+		UserDao UserDao = new UserDao();
+		
+		String m =UserDao.virfConex(pass, email);
+		
+		System.out.println(m);
+
 		// TODO Auto-generated method stub
 	}
 

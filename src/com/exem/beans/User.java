@@ -8,7 +8,7 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class User {
 	private int Id_user;
-	private String Nom_user;
+	private String nom_user;
 	private String prenom_user;
 	private String pass_user;
 	private String type_user;
@@ -28,10 +28,10 @@ public class User {
 		Id_user = id_user;
 	}
 	public String getNom_user() {
-		return Nom_user;
+		return nom_user;
 	}
 	public void setNom_user(String nom_user) {
-		Nom_user = nom_user;
+		this.nom_user = nom_user;
 	}
 	public String getPrenom_user() {
 		return prenom_user;

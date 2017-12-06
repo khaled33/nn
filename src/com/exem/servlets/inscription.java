@@ -41,6 +41,9 @@ public class inscription extends HttpServlet {
 		user.setEmail_user(request.getParameter("email"));
 		UserDao UserDao = new  UserDao();
 		UserDao.ajout(user);
+		
+		request.setAttribute("user", user);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward( request, response );
 	}
 
 }

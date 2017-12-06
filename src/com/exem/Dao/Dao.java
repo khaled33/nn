@@ -5,8 +5,8 @@ package com.exem.Dao;
 
 
 public interface Dao<T> {
-	public  static   T ajout(T obj);
-	
+	public     T ajout(T obj);
+	public String virfConex(String pass ,String email );
 
 
 
