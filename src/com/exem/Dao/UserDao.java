@@ -44,7 +44,7 @@ public class  UserDao implements Dao<User> {
 	public boolean virfConex(String pass ,String email ) {
 		
 		Connection connect =bdd.getInstance();
-		String req="SELECT * FROM user Where email_user="+email+"   ";
+		String req="SELECT * FROM user Where email_user="+email+" && pass_user="+pass+"  ";
 		
 		Statement stmt=null;
 		boolean err=true;
