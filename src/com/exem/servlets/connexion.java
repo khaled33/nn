@@ -38,14 +38,19 @@ public class connexion extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email= getInitParameter("email");
-		String pass= getInitParameter("pass");
+		String email= request.getParameter("email");
+		String pass= request.getParameter("pass");
 		
 		UserDao UserDao = new UserDao();
 		
 		boolean m =UserDao.virfConex(pass, email);
 		
-		System.out.println(m);
+		if(m==true){
+			response.sendRedirect( request.getContextPath()+"/WEBINF/index.jsp");
+		}
+		else{
+			
+		}
 
 		// TODO Auto-generated method stub
 	}
