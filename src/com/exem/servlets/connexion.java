@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.exem.Dao.UserDao;
 
@@ -46,7 +47,11 @@ public class connexion extends HttpServlet {
 		boolean m =UserDao.virfConex(pass, email);
 		
 		if(m==true){
-			response.sendRedirect( request.getContextPath()+"/WEBINF/index.jsp");
+			 HttpSession session = request.getSession();
+
+		      session.setAttribute("email", email);
+		        //request.setAttribute("email", email);
+		        response.sendRedirect( request.getContextPath()+"/index");
 		}
 		else{
 			
