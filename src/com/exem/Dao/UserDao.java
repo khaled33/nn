@@ -10,6 +10,7 @@ import com.mysql.jdbc.PreparedStatement;
 public class  UserDao implements Dao<User> {
 
 	Connection connect =bdd.getInstance();
+	
 	public    User ajout(User obj) {
 		Connection connect =bdd.getInstance();
 		String query="INSERT INTO `user` (`Id_user`, `Nom_user`, `prenom_user`, `email_user`, `pass_user`, `image`, type_user)"

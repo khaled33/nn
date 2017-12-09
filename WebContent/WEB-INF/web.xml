@@ -34,6 +34,17 @@
     <servlet-name>index</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
+  
+  //******* page parametre ********* //
+  
+  <servlet>
+    <servlet-name>parametre</servlet-name>
+    <servlet-class>com.exem.servlets.parametre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>parametre</servlet-name>
+    <url-pattern>/parametre</url-pattern>
+  </servlet-mapping>
 </web-app>
 
 </element>

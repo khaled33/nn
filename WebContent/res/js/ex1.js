@@ -110,12 +110,6 @@ $(document).ready(function () {
 
 
 
-function aff() {
-    $.post("recep-rapport.php",function (data) {
-        $('.box-content').html(data);
-
-    });
-}
 
 
 

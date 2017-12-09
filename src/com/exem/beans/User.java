@@ -1,10 +1,6 @@
 package com.exem.beans;
 
-import java.sql.SQLException;
 
-import com.exem.bdd.bdd;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
 
 public class User {
 	private int Id_user;
