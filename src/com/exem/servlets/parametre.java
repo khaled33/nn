@@ -42,7 +42,7 @@ public class parametre extends HttpServlet {
 			rap.setDescription(request.getParameter("desc"));
 			rap.setRapport(request.getParameter("file"));
 			
-		DaoRapImpli daoRapImpli= new DaoRapImpli();
+		   DaoRapImpli daoRapImpli= new DaoRapImpli();
 		
 		daoRapImpli.ajout(rap);
 		
